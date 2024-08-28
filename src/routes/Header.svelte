@@ -10,12 +10,13 @@
         </div>
         <div class="links">
             <a href="/">Home</a>
-            <a href="/">404 Page</a>
-            <a href="/">Features</a>
+            <a href="/404">404 Page</a>
+            <a href="/404">Features</a>
             <a href="/">Buy a coffee</a>
         </div>
     </div>
 </header>
+<div style="height: 42px;"></div>
 
 <style>
 	header {
@@ -59,5 +60,24 @@
     .links > a {
         color: black;
         text-decoration: none;
+        position: relative;
+
+        transition: 0.3s;
+    }
+
+    .links > a::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 0.1em;
+        background-color: black;
+        opacity: 0;
+        transition: opacity 350ms, transform 350ms;
+    }
+
+    .links > a:hover::after {
+        opacity: 1;
     }
 </style>
