@@ -16,7 +16,6 @@
         </div>
     </div>
 </header>
-<div style="height: 42px;"></div>
 
 <style>
 	header {

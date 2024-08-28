@@ -8,6 +8,24 @@ body {
 	margin: 0px;
 }
 
+.button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	background-color: white;
+	color: black;
+	border: none;
+	outline: none;
+
+	height: 50px;
+
+	font-size: 16px;
+	text-decoration: none;
+	border-radius: 12px;
+	box-shadow: 4px 4px 12px 0px rgba(0,0,0,0.47);
+}
+
 .flex-row {
 	display: flex;
 	flex-direction: row;
