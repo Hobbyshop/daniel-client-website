@@ -2,6 +2,8 @@
 	import mainMenu from "$lib/images/main-menu.png"
 	import { Download02Icon } from "hugeicons-svelte";
 	import { Clock01Icon } from "hugeicons-svelte";
+    import Information from "./Information.svelte";
+    import Footer from "./Footer.svelte";
 </script>
 
 <svelte:head>
@@ -30,6 +32,8 @@
 		</div>
 	</div>
 </main>
+<Information/>
+<Footer/>
 
 <style>
 	main {
@@ -38,8 +42,7 @@
 		justify-content: center;
 
 		width: 100%;
-		height: 80vh;
-		padding-block: 40px;
+		padding-block: 170px;
 	}
 
 	p {

@@ -24,6 +24,7 @@
 		justify-content: center;
 
         position: fixed;
+        z-index: 100;
         width: 100%;
         backdrop-filter: blur(40px);
 	}
