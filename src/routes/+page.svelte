@@ -8,7 +8,7 @@
 
 <svelte:head>
 	<title>Daniel Client</title>
-	<meta name="description" content="Daniel Client home page" />
+	<meta name="description" content="The Daniel Client home page. Download today, best client ngl" />
 </svelte:head>
 
 <main>
