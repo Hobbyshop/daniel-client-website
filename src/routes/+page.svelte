@@ -1,7 +1,7 @@
 <script>
 	import mainMenu from "$lib/images/main-menu.png"
 	import { Download02Icon } from "hugeicons-svelte";
-	import { Clock01Icon } from "hugeicons-svelte";
+	import { UnavailableIcon } from "hugeicons-svelte";
     import Information from "./Information.svelte";
     import Footer from "./Footer.svelte";
 </script>
@@ -18,11 +18,11 @@
 			<div class="buttons">
 				<a href="/" class="button download-button">
 					<Download02Icon size={20} />
-					Download Now
+					Download
 				</a>
 				<a href="/" class="button">
-					<Clock01Icon size={20} />
-					Download Later
+					<UnavailableIcon size={20} />
+					Not Download
 				</a>
 			</div>
 		</div>
