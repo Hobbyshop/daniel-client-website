@@ -1,8 +1,8 @@
 <section>
     <div class="background">
         <div>
-            <h1>How to install</h1>
-            <p>Extract the ZIP file and run the bat file or the sh file depending on your operating system.</p>
+            <h1>How to use</h1>
+            <p>Extract the ZIP-Archive and run the start.bat file.</p>
         </div>
         <div>
             <h1>FAQ</h1>
