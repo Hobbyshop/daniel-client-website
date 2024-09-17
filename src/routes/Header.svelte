@@ -12,7 +12,7 @@
             <a href="/">Home</a>
             <a href="/404">404 Page</a>
             <a href="/404">Features</a>
-            <a href="/">Buy a coffee</a>
+            <a href="https://www.coffeecircle.com/en/k/buna-dimaa">Buy a coffee</a>
         </div>
     </div>
 </header>
