@@ -1,7 +1,5 @@
 <script>
 	import mainMenu from "$lib/images/main-menu.png"
-	import { Download02Icon } from "hugeicons-svelte";
-	import { UnavailableIcon } from "hugeicons-svelte";
     import Information from "./Information.svelte";
     import Footer from "./Footer.svelte";
 </script>
@@ -17,11 +15,9 @@
 			<p>The previous-level, stone age, primitive Minecraft Client created because Daniel didn't want to make the client himself.</p>
 			<div class="buttons">
 				<a href="https://www.mediafire.com/file/w34q8xlt3uei0p1/DanielClient.zip/file" class="button download-button">
-					<Download02Icon size={20} />
 					Download
 				</a>
 				<a href="/" class="button">
-					<UnavailableIcon size={20} />
 					Not Download
 				</a>
 			</div>
