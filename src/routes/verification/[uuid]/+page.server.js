@@ -4,6 +4,7 @@ export async function load({ params }) {
 
     return {
         avatarId: nameRes.ok ? params.uuid : "X-Steve",
-        name: nameRes.ok ? nameData.name : "Player"
+        name: nameRes.ok ? nameData.name : "Player",
+        verificationId: params.uuid
     }
 }

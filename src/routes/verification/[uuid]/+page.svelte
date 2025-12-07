@@ -5,6 +5,16 @@
     export let data;
 
     let contiune = false
+
+    async function continueButtonClicked() {
+        contiune = true
+
+        await fetch("/api/verification/complete", {
+            method: "POST",
+            body: JSON.stringify({ uuid: data.verificationId }),
+            headers: { "ContentType": "application/json" }
+        })
+    }
 </script>
 
 {#if contiune}
@@ -15,7 +25,7 @@
             <p class="nametag">{data.name}</p>
             <img src="https://vzge.me/bust/256/{data.avatarId}?no=cape" alt="Skin" draggable="false">
         </div>
-        <button class="button" on:click={() => contiune = true}>Continue</button>
+        <button class="button" on:click={continueButtonClicked}>Continue</button>
     </div>
 {/if}
 
