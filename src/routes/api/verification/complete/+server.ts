@@ -1,8 +1,8 @@
 import { error } from '@sveltejs/kit';
 import { _pendingClients } from '../start/+server';
 
-export async function PUT({ request }) {
-    const { uuid } = await request.json()
+export async function PUT({ url }) {
+    const uuid = url.searchParams.get("uuid")
     if (!_pendingClients.has(uuid))
         error(400, "Provided UUID has no pending verification!")
 
