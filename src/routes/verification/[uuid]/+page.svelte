@@ -9,10 +9,10 @@
     async function continueButtonClicked() {
         contiune = true
 
-        await fetch("/api/verification/complete", {
+        await fetch("/api/verification/complete/", {
             method: "POST",
             body: JSON.stringify({ uuid: data.verificationId }),
-            headers: { "ContentType": "application/json" }
+            headers: { "Content-Type": "application/json" }
         })
     }
 </script>
