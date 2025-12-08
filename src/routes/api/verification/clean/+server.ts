@@ -1,8 +1,8 @@
-import { _pendingClients } from "../start/+server";
+import { pendingClients } from "$lib/server/state";
 
 export async function GET() {
-    for(const uuid in _pendingClients) {
-        if (_pendingClients.get(uuid)!.startTime + 3_600_000 < Date.now())
-            _pendingClients.delete(uuid)
+    for(const uuid in pendingClients) {
+        if (pendingClients.get(uuid)!.startTime + 3_600_000 < Date.now())
+            pendingClients.delete(uuid)
     }
 }
