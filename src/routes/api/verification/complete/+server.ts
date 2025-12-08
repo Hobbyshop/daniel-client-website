@@ -6,7 +6,6 @@ export async function PUT({ request }) {
     if (!_pendingClients.has(uuid))
         error(400, "Provided UUID has no pending verification!")
 
-    console.log("Complete: " + uuid)
-    _pendingClients.set(uuid, true)
+    _pendingClients.get(uuid)!.complete = true
     return new Response("ok")
 }

@@ -6,11 +6,9 @@ export async function GET({ request }) {
     if (!_pendingClients.has(uuid))
         error(400, "Provided UUID has no pending verification!")
 
-    console.log("Check: " + uuid)
-
     const start = Date.now()
     while (Date.now() - start < 10_000) {
-        if (!_pendingClients.get(uuid)) {
+        if (!_pendingClients.get(uuid)!.complete) {
             // wait 20ms and try again
             await new Promise(r => setTimeout(r, 20))
             continue
