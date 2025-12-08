@@ -8,7 +8,8 @@
 
     async function continueButtonClicked() {
         contiune = true
-        await fetch(`https://danielclient.vercel.app/api/verification/complete?uuid=${data.verificationId}`, {method: "PUT"})
+        const res = await fetch(`/api/verification/complete?uuid=${data.verificationId}`, {method: "PUT"})
+        console.log("Verification complete: " + await res.text())
     }
 </script>
 

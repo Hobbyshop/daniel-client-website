@@ -6,8 +6,6 @@ export async function GET({ url }) {
     if (!_pendingClients.has(uuid))
         error(400, "Provided UUID has no pending verification!")
 
-    console.log("size: " + _pendingClients.size)
-
     const start = Date.now()
     while (Date.now() - start < 9_000) {
         if (!_pendingClients.get(uuid)!.complete) {
