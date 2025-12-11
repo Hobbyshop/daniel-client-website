@@ -1,8 +1,9 @@
-import { pendingClients } from "$lib/server/state"
+import { kv } from "@vercel/kv"
 
 export async function POST({ url }) {
     const uuid = url.searchParams.get("uuid")
-    pendingClients.set(uuid, {complete: false, startTime: Date.now()})
+    let client: VerificationClient = {complete: false, startTime: Date.now()}
+    await kv.set(uuid, client)
 
     return new Response("ok")
 }

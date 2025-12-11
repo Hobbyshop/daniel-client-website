@@ -1,8 +1,10 @@
-import { pendingClients } from "$lib/server/state";
+import { kv } from "@vercel/kv";
 
 export async function GET() {
-    for(const uuid in pendingClients) {
-        if (pendingClients.get(uuid)!.startTime + 3_600_000 < Date.now())
-            pendingClients.delete(uuid)
+    for(const uuid in await kv.keys("*")) {
+        const client: VerificationClient | null = await kv.get(uuid)
+
+        if (client && client.startTime + 3_600_000 < Date.now())
+            await kv.del(uuid)
     }
 }
