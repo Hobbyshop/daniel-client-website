@@ -1,6 +1,7 @@
 import { error } from '@sveltejs/kit';
 import { kv } from '@vercel/kv';
 
+
 export async function PUT({ url }) {
     const uuid = url.searchParams.get("uuid")
     const client: VerificationClient | null = await kv.get(uuid)
