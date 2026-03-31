@@ -14,7 +14,7 @@
 		<div class="left-side">
 			<p>The previous-level, stone age, primitive Minecraft Client created because Daniel didn't want to make the client himself.</p>
 			<div class="buttons">
-				<a href="https://www.mediafire.com/file/w34q8xlt3uei0p1/DanielClient.zip/file" class="button download-button">
+				<a href="https://www.mediafire.com/file/zf3d6lj3patql3u/DanielClient.zip/file" class="button download-button">
 					Download
 				</a>
 				<a href="/" class="button">
